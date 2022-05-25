@@ -1,38 +1,944 @@
-.App {
-  text-align: center;
+/* Load the tailwind assets*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Load the tailwind assets*/
+
+/*Customize the aos*/
+body[data-aos-duration='4000'] [data-aos],
+  [data-aos][data-aos][data-aos-duration='4000']{
+    transition-duration: 4000ms;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body[data-aos-delay='4000'][data-aos],
+  [data-aos][data-aos][data-aos-delay='4000'] {
+    transition-delay: 4000ms;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body[data-aos-duration='5000'] [data-aos],
+  [data-aos][data-aos][data-aos-duration='5000']{
+    transition-duration: 5000ms;
+}
+
+body[data-aos-delay='5000'][data-aos],
+  [data-aos][data-aos][data-aos-delay='5000'] {
+    transition-delay: 5000ms;
+}
+/*Customize the aos*/
+
+/*Import local font*/
+@font-face {
+  font-family: 'Lato';
+  src: local('Lato'), url(./assets/fonts/Lato/Lato-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Intro';
+  src: local('Intro'), url(./assets/fonts/intro/Intro.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: local('Lora'), url(./assets/fonts/Lora/Lora-MediumItalic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: local('OpenSans'), url(./assets/fonts/OpenSans/OpenSans-Regular.ttf) format('truetype');
+}
+/*Import local font*/
+
+/*Navbar Icon Styling*/
+.navbar-icon1{
+  width:11px;
+  height:20px;
+}
+
+.navbar-icon2, .navbar-icon3{
+  width:20px;
+  height:18px;
+}
+/*Navbar Icon Styling*/
+
+/*Sections Styling*/
+.section1{
+  position:relative;
+  width:100%;
+  margin-top:30px;
+}
+
+.section2{
+  position:static;
+  width:100%
+}
+
+.section-2-slight{
+  margin-top:-20px
+}
+
+.section2-content-desc{
+  padding-left:5%;
+  padding-right:5%;
+  padding-top:5%;
+}
+
+.section3{
+  position:static;
+  width:100%
+}
+
+.section3-img1{
+  max-width: 30%;
+}
+
+.section3-img2{
+max-width: 35%;
+}
+
+.section3-img3{
+max-width: 30%;
+}
+/*Sections Styling*/
+
+/*Eclipse Component Styling*/
+.eclipse1{
+  width:80px;
+  height:80px;
+  top:50px;
+  left:-10px;
+}
+
+.eclipse2{
+  width:150px;
+  height:150px;
+  top:40px;
+  left:-80px;
+}
+
+.eclipse3{
+  width:50px;
+  height:80px;
+  bottom:-20px;
+}
+
+.eclipse4{
+  width:100px;
+  height:140px;
+  bottom:-95px;
+}
+/*Eclipse Component Styling*/
+
+/*Succus Image Styling*/
+.succusLeaf{
+  justify-content: flex-end;
+  align-self: flex-end;
+  width:50%;
+}
+/*Succus Image Styling*/
+
+/*======================  ON SCREEN WIDTH MINIMUM 300px ==========================*/
+    /*SECTION 1 */
+@media only screen and (min-width:300px) {
+      .section1-bg {
+        background-size: cover;
+        background-position: bottom;
+        padding-top:0px;
+        padding-bottom:0px;
+        height:400px;
+        margin-top:0px;
+        padding-left:33%
+      }
+
+      .section1-content{
+        position:absolute;
+        bottom:120px;
+      }
+
+      .section1-title{
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom:5px
+      }
+
+      .section1-big-text{
+        font-size:23px;
+        line-height:27px;
+      }
+
+      .section1-small-text{
+        font-size: 11px; 
+        line-height:14px; 
+      }
+    /*SECTION 1 */
+
+    /*SECTION 2 */
+
+    .section-2-closer{
+      margin-top:-106px;
+    }
+
+    .section-2-wrapper{
+      flex-direction: column;
+    }
+
+    .section2-content-title{
+      width: 100%;
+      text-align:center;
+      margin-top:30px;
+    }
+    
+    /*SECTION 2 */
+
+
+    /*SECTION 3 */
+
+    .section3-closer{
+      margin-top:-98px;
+    }
+
+    .section3-wrapper{
+      flex-direction: column-reverse;
+    }
+
+    .arrows-down-wrapper{
+      margin-bottom:50px
+    }
+
+    .arrows-down-one{
+      width:10px;
+      height:10px;
+    }
+
+    .arrows-down-two{
+      width:10px;
+      height:10px;
+      margin-top:-5px;
+    }
+
+    .section3-content-title{
+      font-size: 40px;
+    }
+
+    .section3-content-desc{
+      font-size: 13px;
+    }
+    /*SECTION 3 */
+}
+/*======================  ON SCREEN WIDTH MINIMUM 300 px ==========================*/    
+
+/*======================  ON SCREEN WIDTH MINIMUM 350px ==========================*/
+    /*SECTION 1 */
+@media only screen and (min-width:350px) {
+      
+      .section1-bg {
+        background-size: cover;
+        background-position: bottom;
+        padding-top:0px;
+        padding-bottom:0px;
+        height:400px;
+        margin-top:0px;
+        padding-left:35%
+      }
+
+      .section1-content{
+        position:absolute;
+        bottom:120px;
+      }
+
+      .section1-title{
+        font-size: 13px;
+        line-height: 13px;
+        margin-bottom:5px
+      }
+
+      .section1-big-text{
+        font-size:25px;
+        line-height:25px;
+      }
+
+      .section1-small-text{
+        font-size: 11.5px; 
+        line-height:15px; 
+      }
+    /*SECTION 1 */
+
+    /*SECTION 2 */
+    .section-2-closer{
+      margin-top:-106px;
+    }
+
+    .section-2-wrapper{
+      flex-direction: column;
+    }
+
+    .section2-content-title{
+      width: 100%;
+      text-align:center;
+      margin-top:30px;
+    }
+
+    
+    /*SECTION 2 */
+
+
+    /*SECTION 3 */
+    .section3-wrapper{
+      flex-direction: column-reverse;
+    }
+
+    .section3-closer{
+      margin-top:-99px;
+    }
+
+    .arrows-down-two{
+      width:10px;
+      height:10px;
+      margin-top:-5px;
+    }
+
+    /*SECTION 3 */
+}
+/*======================  ON SCREEN WIDTH MINIMUM 350 px ==========================*/
+
+/*======================  ON SCREEN WIDTH MINIMUM 401 px ==========================*/
+    /*SECTION 1 */
+@media only screen and (min-width:401px) {
+      
+      .section1-bg {
+        background-size: cover;
+        background-position: bottom;
+        padding-top:0px;
+        padding-bottom:0px;
+        height:400px;
+        margin-top:0px;
+        padding-left:37%
+      }
+
+      .section1-content{
+        position:absolute;
+        bottom:110px;
+      }
+
+      .section1-title{
+        font-size: 14px;
+        line-height: 14px;
+        margin-bottom:5px
+      }
+
+      .section1-big-text{
+        font-size:27px;
+        line-height:27px;
+      }
+
+      .section1-small-text{
+        font-size: 13px; 
+        line-height:16px; 
+      }
+    /*SECTION 1 */
+
+    /*SECTION 2 */
+    .section-2-closer{
+      margin-top:-106px;
+    }
+
+    .section-2-wrapper{
+      flex-direction: column;
+    }
+
+    .section2-content-title{
+      width: 100%;
+      text-align:center;
+      margin-top:30px;
+    }
+    /*SECTION 2 */
+
+
+    /*SECTION 3 */
+    .section3-wrapper{
+      flex-direction: column-reverse;
+    }
+
+    .arrows-down-two{
+      width:10px;
+      height:10px;
+      margin-top:-5px;
+    }
+
+    
+    /*SECTION 3 */
+}
+/*======================  ON SCREEN WIDTH MINIMUM 401 px ==========================*/
+
+/*======================  ON SCREEN WIDTH MINIMUM 450 px ==========================*/
+    /*SECTION 1 */
+@media only screen and (min-width:450px) {
+      
+      .section1-bg {
+        background-size: cover;
+        background-position: bottom;
+        padding-bottom:0px;
+        height:400px;
+        padding-left:38%
+      }
+
+      .section1-content{
+        position:absolute;
+        bottom:100px;
+      }
+
+      .section1-title{
+        font-size: 15px;
+        line-height: 15px;
+        margin-bottom:5px
+      }
+
+      .section1-big-text{
+        font-size:30px;
+        line-height:30px;
+      }
+
+      .section1-small-text{
+        font-size: 13px; 
+        line-height:16px; 
+      }
+    /*SECTION 1 */
+
+    /*SECTION 2 */
+    .section-2-closer{
+      margin-top:-106px;
+    }
+
+    .section-2-wrapper{
+      flex-direction: column;
+    }
+
+    .section2-content-title{
+      width: 100%;
+      text-align:center;
+      margin-top:30px;
+    }
+    /*SECTION 2 */
+
+
+    /*SECTION 3 */
+    .section3-wrapper{
+      flex-direction: column-reverse;
+    }
+
+    .section3-closer{
+      margin-top:-100px;
+    }
+
+    .arrows-down-two{
+      width:10px;
+      height:10px;
+      margin-top:-5px;
+    }
+
+    /*SECTION 3 */
+}
+/*======================  ON SCREEN WIDTH MINIMUM 450 px ==========================*/
+
+/*======================  ON SCREEN WIDTH MINIMUM 500 px ==========================*/
+    /*SECTION 1 */
+@media only screen and (min-width:500px) {
+      
+      .section1-bg {
+        background-size: cover;
+        background-position: bottom;
+        padding-bottom:0px;
+        height:400px;
+        padding-left:40%
+      }
+
+      .section1-content{
+        position:absolute;
+        bottom:100px;
+      }
+
+      .section1-title{
+        font-size: 15px;
+        line-height: 18px;
+        margin-bottom:5px
+      }
+
+      .section1-big-text{
+        font-size:32px;
+        line-height:38px;
+      }
+
+      .section1-small-text{
+        font-size: 13px; 
+        line-height:16px; 
+      }
+    /*SECTION 1 */
+
+    /*SECTION 2 */
+
+    .section-2-closer{
+      margin-top:-106px;
+    }
+
+    .section-2-wrapper{
+      flex-direction: column;
+    }
+
+    .section2-cought{
+      justify-content:center;
+      align-items:center
+    }
+
+    .section2-cought-header{
+      text-align:center
+    }
+
+    .section2-cought-detail{
+      flex-direction:row;
+    }
+
+    .section2-content-title{
+      width: 100%;
+      text-align:center;
+      margin-top:30px;
+    }
+
+    
+    /*SECTION 2 */
+
+
+    /*SECTION 3 */
+    .section3-wrapper{
+      flex-direction: column-reverse;
+    }
+
+    .section3-closer{
+      margin-top:-101px;
+    }
+
+    .section3-content{
+      padding-right:5%;
+    }
+
+    .arrows-down-two{
+      width:10px;
+      height:10px;
+      margin-top:-5px;
+    }
+
+    
+    /*SECTION 3 */
+}
+
+/*======================  ON SCREEN WIDTH MINIMUM 550 px ==========================*/
+    /*SECTION 1 */
+@media only screen and (min-width:550px) {
+      
+      .section1-bg {
+        background-size: cover;
+        background-position: bottom;
+        padding-bottom:0px;
+        height:400px;
+        padding-left:40%
+      }
+
+      .section1-content{
+        position:absolute;
+        bottom:100px;
+      }
+
+      .section1-title{
+        font-size: 16px;
+        line-height: 16px;
+        margin-bottom:5px
+      }
+
+      .section1-big-text{
+        font-size:34px;
+        line-height:34px;
+      }
+
+      .section1-small-text{
+        font-size: 14px; 
+        line-height:18px; 
+      }
+    /*SECTION 1 */
+
+    /*SECTION 2 */
+        
+    
+    
+
+    .section-2-closer{
+      margin-top:-106px;
+    }
+
+    .section-2-wrapper{
+      flex-direction: column;
+    }
+
+    .section2-cought{
+      justify-content:center;
+      align-items:center
+    }
+
+    .section2-cought-header{
+      text-align:center
+    }
+
+    .section2-cought-detail{
+      flex-direction:row;
+    }
+
+    .section2-content-title{
+      width: 100%;
+      text-align:center;
+      margin-top:30px;
+    }
+
+    
+
+    
+    
+    /*SECTION 2 */
+
+
+    /*SECTION 3 */
+    
+    
+
+    .section3-wrapper{
+      flex-direction: row;
+    }
+
+    .section3-closer{
+      margin-top:-102px;
+    }
+
+    .section3-content{
+      padding-right:5%;
+    }
+
+    
+
+    .arrows-down-two{
+      width:10px;
+      height:10px;
+      margin-top:-5px;
+    }
+
+    
+
+    
+
+    
+    /*SECTION 3 */
+}
+/*======================  ON SCREEN WIDTH MINIMUM 550 px ==========================*/
+
+
+/*======================  ON SCREEN WIDTH MINIMUM 640 px ==========================*/
+    /*SECTION 1 */
+@media only screen and (min-width:640px) {
+      .section1-bg {
+        background-size: cover;
+        padding-bottom:0px;
+        height:500px;
+        padding-left:40%
+      }
+
+      .section1-content{
+        position:absolute;
+        bottom:150px;
+      }
+
+      .section1-title{
+        font-size: 16px;
+        line-height: 16px;
+        margin-bottom:5px
+      }
+
+      .section1-big-text{
+        font-size:40px;
+        line-height:40px;
+      }
+
+      .section1-small-text{
+        font-size: 14px; 
+        line-height:18px; 
+      }
+    /*SECTION 1 */
+
+    /*SECTION 2 */
+    .section-2-closer{
+      margin-top:-106px;
+    }
+
+    .section-2-wrapper{
+      flex-direction: column;
+    }
+
+    .section2-cought{
+      justify-content:center;
+      align-items:center
+    }
+
+    .section2-cought-header{
+      text-align:center
+    }
+
+    .section2-cought-detail{
+      flex-direction:row;
+    }
+
+    .section2-content-title{
+      width: 100%;
+      text-align:center;
+      margin-top:30px;
+    }
+
+    
+    /*SECTION 2 */
+
+
+    /*SECTION 3 */
+    .section3-closer{
+      margin-top:-103px;
+    }
+    .arrows-down-two{
+      width:10px;
+      height:10px;
+      margin-top:-5px;
+    }
+
+    
+
+    
+    /*SECTION 3 */
+}
+/*======================  ON SCREEN WIDTH MINIMUM 640 px ==========================*/
+
+/*======================  ON SCREEN WIDTH MINIMUM 700 px ==========================*/
+@media only screen and (min-width:700px) {
+    .section3-closer{
+      margin-top:-105px;
+    }
+}
+
+/*======================  ON SCREEN WIDTH MINIMUM 700 px ==========================*/
+
+
+/*======================  ON SCREEN WIDTH MINIMUM 800 px ==========================*/
+    /*SECTION 1 */
+@media only screen and (min-width:800px) {
+      
+      .section1-bg {
+        background-size: cover;
+        background-position:top;
+        padding-bottom:0px;
+        height:500px;
+        padding-left:43%
+      }
+
+      .section1-content{
+        position:absolute;
+        bottom:150px;
+      }
+
+      .section1-title{
+        font-size: 16px;
+        line-height: 16px;
+        margin-bottom:5px
+      }
+
+      .section1-big-text{
+        font-size:48px;
+        line-height:48px;
+      }
+
+      .section1-small-text{
+        font-size: 14px; 
+        line-height:18px; 
+      }
+    /*SECTION 1 */
+
+    /*SECTION 2 */
+    .section-2-closer{
+      margin-top:-115px;
+    }
+
+    .section-2-wrapper{
+      flex-direction: row;
+      justify-content:space-around;
+    }
+
+    .section2-cought{
+      flex:1 1 0%;
+      justify-content:center;
+      align-items: flex-end;
+    }
+
+    .section2-cought-header{
+      text-align:right
+    }
+
+    .section2-cought-detail{
+      flex:2 2 0%;
+      flex-direction:row;
+    }
+
+    .section2-content-title{
+      width: 100%;
+      text-align:center;
+      margin-top:30px;
+    }
+    /*SECTION 2 */
+
+
+    /*SECTION 3 */
+    .section3-closer{
+      margin-top:-107px;
+    }
+
+    .arrows-down-two{
+      width:10px;
+      height:10px;
+      margin-top:-5px;
+    }
+
+    .section3-content-title{
+      font-size:48px;
+      line-height:48px;
+    }
+
+    .section3-content-desc{
+      font-size: 14px;
+      line-height:18px;
+    }
+
+    /*SECTION 3 */
+}
+/*======================  ON SCREEN WIDTH MINIMUM 800 px ==========================*/
+
+
+/*======================  ON SCREEN WIDTH MINIMUM 900 px ==========================*/
+@media only screen and (min-width:900px) {
+    .section3-closer{
+      margin-top:-109px;
+    }
+    .section-2-closer{
+      margin-top:-118px;
+    }
+}
+/*======================  ON SCREEN WIDTH MINIMUM 900 px ==========================*/
+
+
+/*======================  ON SCREEN WIDTH MINIMUM 1000 px ==========================*/
+@media only screen and (min-width:1000px) {
+  .section3-closer{
+    margin-top:-110px;
   }
 }
+/*======================  ON SCREEN WIDTH MINIMUM 1000 px ==========================*/
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
+/*======================  ON SCREEN WIDTH MINIMUM 1200 px ==========================*/
+    /*SECTION 1 */
+@media only screen and (min-width:1200px) {
+      .section1-bg {
+        background-size: cover;
+        padding-top:10%;
+        padding-bottom:40%;
+        height:730px;
+        padding-left:45%
+      }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+      .section1-content{
+        position:absolute;
+        bottom:300px;
+      }
+
+      .section1-title{
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom:5px
+      }
+
+      .section1-big-text{
+        font-size:48px;
+        line-height:50px;
+      }
+
+      .section1-small-text{
+        font-size: 14px; 
+        line-height:18px; 
+      }
+    /*SECTION 1 */
+
+    /*SECTION 2 */
+    .section-2-slight{
+      margin-top:-50px
+    }
+
+    .section-2-closer{
+      margin-top:-123px;
+    }
+
+    .section-2-wrapper{
+      flex-direction: row;
+      justify-content:space-around;
+    }
+
+    .section2-cought{
+      flex:1 1 0%;
+      justify-content:center;
+      align-items: flex-end;
+    }
+
+    .section2-cought-header{
+      text-align:right
+    }
+
+    .section2-cought-detail{
+      flex:2 2 0%;
+      flex-direction:row;
+    }
+
+    .section2-content-title{
+      width: 100%;
+      text-align:center;
+      margin-top:30px;
+    }
+    
+    /*SECTION 2 */
+
+
+    /*SECTION 3 */
+    .section3-slight{
+      margin-top:-30px;
+    }
+    .section3-closer{
+      margin-top:-116px;
+    }
+
+    .arrows-down-two{
+      width:10px;
+      height:10px;
+      margin-top:-5px;
+    }
+
+    .section3-content-title{
+      font-size:60px;
+      line-height:60px;
+    }
+
+    .section3-content-desc{
+      font-size: 15px;
+      line-height:18px;
+    }
+
+    
+    /*SECTION 3 */
 }
+/*======================  ON SCREEN WIDTH MINIMUM 1200 px ==========================*/
+
+
